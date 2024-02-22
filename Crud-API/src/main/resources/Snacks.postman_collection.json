@@ -1,0 +1,199 @@
+{
+	"info": {
+		"_postman_id": "4a571479-a622-4998-9b93-f5c6ded1b9a7",
+		"name": "Snacks",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "33098888"
+	},
+	"item": [
+		{
+			"name": "Create Snack",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Swiss Roll\",\r\n    \"brand\": \"Little Debbie\",\r\n    \"caloriesPerServing\": 300,\r\n    \"cost\": 4.98,\r\n    \"sweet\": true,\r\n    \"salty\": false,\r\n    \"healthy\": false,\r\n    \"crunchy\": false,\r\n    \"soft\": true\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v1/snacks",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"snacks"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create 2nd Snack",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Nacho Cheese Doritos\",\r\n    \"brand\": \"Frito-Lay\",\r\n    \"caloriesPerServing\": 150,\r\n    \"cost\": 5.48,\r\n    \"sweet\": false,\r\n    \"salty\": true,\r\n    \"healthy\": false,\r\n    \"crunchy\": true,\r\n    \"soft\": false\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v1/snacks",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"snacks"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Snacks",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v1/snacks",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"snacks"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Snack w/ ID",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v1/snacks/d363f9ad-e6d4-4578-b632-be8020f67cdc",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"snacks",
+						"d363f9ad-e6d4-4578-b632-be8020f67cdc"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Snack",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"id\": \"f9f2f5d3-639e-400f-930b-7de1308042ba\",\r\n        \"name\": \"Cool Ranch Doritos\",\r\n        \"brand\": \"Frito-Lay\",\r\n        \"caloriesPerServing\": 150,\r\n        \"cost\": 5.48,\r\n        \"sweet\": false,\r\n        \"salty\": true,\r\n        \"healthy\": false,\r\n        \"crunchy\": true,\r\n        \"soft\": false\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v1/snacks/f9f2f5d3-639e-400f-930b-7de1308042ba",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"snacks",
+						"f9f2f5d3-639e-400f-930b-7de1308042ba"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Snack",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v1/snacks/d363f9ad-e6d4-4578-b632-be8020f67cdc",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"snacks",
+						"d363f9ad-e6d4-4578-b632-be8020f67cdc"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

@@ -1,0 +1,199 @@
+{
+	"info": {
+		"_postman_id": "d62b1c31-d3cb-4981-b48c-3c5140a1727a",
+		"name": "Plants",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "33098888"
+	},
+	"item": [
+		{
+			"name": "Create Plant",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Monstera\",\r\n    \"type\": \"Tropical\",\r\n    \"cupsOfWater\": 4,\r\n    \"potSize\": \"15 inches\",\r\n    \"soilType\": \"chunky\",\r\n    \"leafColor\": \"dark green\",\r\n    \"averageSizeInFeet\": 3,\r\n    \"lightLevel\": \"bright indirect\",\r\n    \"humidityLevel\": 70\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v1/plants",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"plants"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create 2nd Plant",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Aloe\",\r\n    \"type\": \"Tropical\",\r\n    \"cupsOfWater\": 1,\r\n    \"potSize\": \"6 inches\",\r\n    \"soilType\": \"chunky\",\r\n    \"leafColor\": \"light green\",\r\n    \"averageSizeInFeet\": 1,\r\n    \"lightLevel\": \"bright indirect\",\r\n    \"humidityLevel\": 45\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v1/plants",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"plants"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Plants",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v1/plants",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"plants"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Plant w/ ID",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v1/plants/bb479e16-9c36-425d-9383-f2bf00e212bb",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"plants",
+						"bb479e16-9c36-425d-9383-f2bf00e212bb"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Plant",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"id\": \"7fda5803-c9d6-49b9-b218-be9751c70441\",\r\n        \"name\": \"Monstera Deliciosa\",\r\n        \"type\": \"Tropical\",\r\n        \"cupsOfWater\": 4,\r\n        \"potSize\": \"15 inches\",\r\n        \"soilType\": \"chunky\",\r\n        \"leafColor\": \"dark green\",\r\n        \"averageSizeInFeet\": 3,\r\n        \"lightLevel\": \"bright indirect\",\r\n        \"humidityLevel\": 70.0\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v1/plants/7fda5803-c9d6-49b9-b218-be9751c70441",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"plants",
+						"7fda5803-c9d6-49b9-b218-be9751c70441"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Plant",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v1/plants/f0ece97e-9c1a-4678-9005-04833c11e5ab",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"plants",
+						"f0ece97e-9c1a-4678-9005-04833c11e5ab"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
