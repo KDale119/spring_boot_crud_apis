@@ -1,6 +1,5 @@
 package edu.mcc.codeschool.Crud.API.controllers;
 
-import edu.mcc.codeschool.Crud.API.models.Plants;
 import edu.mcc.codeschool.Crud.API.models.Snacks;
 import jakarta.validation.Valid;
 import org.springframework.http.HttpStatus;
@@ -25,7 +24,7 @@ public class SnacksController {
 
     @GetMapping("/{id}")
     public ResponseEntity<Snacks> getSnackbyId(@PathVariable String id) {
-        Optional<Snacks> snack = snacks.stream().filter(plants -> plants.getId().toString().equals(id)).findFirst();
+        Optional<Snacks> snack = snacks.stream().filter(snacks -> snacks.getId().toString().equals(id)).findFirst();
         if (snack.isPresent()) {
             return ResponseEntity.ok(snack.get());
         } else {
@@ -35,7 +34,7 @@ public class SnacksController {
 
     @PutMapping("/{id}")
     public ResponseEntity<Snacks> updateSnacks(@PathVariable String id, @Valid @RequestBody Snacks request) {
-        Optional<Plants> snack = snacks.stream().filter(plants -> plants.getId().toString().equals(id)).findFirst();
+        Optional<Snacks> snack = snacks.stream().filter(snacks -> snacks.getId().toString().equals(id)).findFirst();
         if (snack.isPresent()) {
             snacks.remove(snack.get());
             snacks.add(request);
@@ -54,7 +53,7 @@ public class SnacksController {
 
     @DeleteMapping("/{id}")
     public ResponseEntity<Snacks> deleteSnack(@PathVariable String id) {
-        Optional<Plants> snack = snacks.stream().filter(plants -> plants.getId().toString().equals(id)).findFirst();
+        Optional<Snacks> snack = snacks.stream().filter(snacks -> snacks.getId().toString().equals(id)).findFirst();
         if (snack.isPresent()) {
             snacks.remove(snack.get());
             return ResponseEntity.ok(snack.get());

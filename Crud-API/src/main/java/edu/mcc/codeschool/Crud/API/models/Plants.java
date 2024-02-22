@@ -1,14 +1,9 @@
 package edu.mcc.codeschool.Crud.API.models;
-
 import jakarta.validation.constraints.Min;
 import jakarta.validation.constraints.NotNull;
-import jakarta.validation.constraints.Size;
-
 import java.util.UUID;
 
 public class Plants {
-
-
     private UUID id;
     @NotNull
     private String name;
